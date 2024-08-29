@@ -1,0 +1,9 @@
+const add= require('./stringCalculator.js');
+
+test('return 0 if the string is empty',()=>{
+    expect(add("")).toBe(0);
+});
+test('return single number if the length of the string is 1',()=>{
+    expect(add("1")).toBe(1);
+    expect(add("2")).toBe(2);
+})
