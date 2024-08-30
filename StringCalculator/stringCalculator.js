@@ -3,7 +3,8 @@ const stringCalculator=(number)=>{
     if(number.length == 1){
         return parseInt(number);
     }
-    const arr=number.split(',');
+    let delimiter = /,| \n |;/; 
+    const arr=number.split(delimiter);
     return arr.reduce((sum,num)=>sum+parseInt(num),0);
 };
 module.exports=stringCalculator;

@@ -10,3 +10,6 @@ test('return single number if the length of the string is 1',()=>{
 test('return sum of numbers separated by coma in the given string',()=>{
     expect(add("1,2,3,4,5")).toBe(15);
 });
+test('return sum of numbers separated by coma and semicolon in the given string',()=>{
+    expect(add("1\n,2")).toBe(3);
+});
