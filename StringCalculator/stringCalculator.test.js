@@ -16,3 +16,6 @@ test('return sum of numbers separated by coma and semicolon in the given string'
 test('return sum of numbers separated by default delimiters',()=>{
     expect(add("//;\n1;2;3")).toBe(6);
 });
+test('return error if the numbers in the string are negative',()=>{
+    expect(add("-1,2,-3")).toBe("Negatives not allowed: -1,-3");
+});

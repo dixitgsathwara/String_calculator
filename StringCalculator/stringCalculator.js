@@ -10,6 +10,19 @@ const stringCalculator=(number)=>{
         number = number.substring(delimiterEndIndex + 1);
     }
     const arr=number.split(delimiter);
-    return arr.reduce((sum,num)=>sum+parseInt(num),0);
+    const negativeArray=[];
+    const sol=arr.reduce((sum,num)=>{
+        if(parseInt(num)<0){
+            negativeArray.push(parseInt(num));
+        }
+        else {
+            sum+=parseInt(num);
+        }
+        return sum;
+    },0)
+    if (negativeArray.length > 0) {
+        return `Negatives not allowed: ${negativeArray.join(',')}`;
+    }
+    return sol;
 };
 module.exports=stringCalculator;
