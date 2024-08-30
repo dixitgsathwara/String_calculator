@@ -15,7 +15,7 @@ const stringCalculator=(number)=>{
         if(parseInt(num)<0){
             negativeArray.push(parseInt(num));
         }
-        else {
+        else if(parseInt(num)<1000) {
             sum+=parseInt(num);
         }
         return sum;

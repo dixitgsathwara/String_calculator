@@ -19,3 +19,6 @@ test('return sum of numbers separated by default delimiters',()=>{
 test('return error if the numbers in the string are negative',()=>{
     expect(add("-1,2,-3")).toBe("Negatives not allowed: -1,-3");
 });
+test('return only those numbers sum whose value is under 1000',()=>{
+    expect(add("1000,21,1001")).toBe(21);
+});
